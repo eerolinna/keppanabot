@@ -12,6 +12,10 @@ bot.on('/help', msg => {
   return msg.reply.text('Laita mulle privaviesti niin välitän tänne. Vain teksti on sallittua, älä yritäkään gif sticker yms 🌚');
 });
 
+bot.on(/\/*./, msg => {
+  console.log('jii')
+})
+
 bot.on('text', msg => {
   if (msg.chat && msg.chat.id < 0) {
     console.log(msg.chat.id)

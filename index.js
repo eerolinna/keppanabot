@@ -1,9 +1,7 @@
+'use strict'
 const token = process.env.KEPPANABOT_TOKEN
 const TeleBot = require('telebot');
 const bot = new TeleBot(token);
-
-const express = require('express')
-const app = express()
 
 const destGroupId = parseInt(process.env.KEPPANABOT_DEST_GROUP, 10);
 

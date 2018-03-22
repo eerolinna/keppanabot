@@ -44,7 +44,7 @@ bot.on('text', msg => {
 });
 
 bot.on('sticker', msg => {
-  if not (msg.chat) {
+  if (!msg.chat) {
     return msg.reply.text('Sori ei stickereitä')
   }
   else {

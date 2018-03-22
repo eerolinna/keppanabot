@@ -17,6 +17,9 @@ bot.on(/\/*./, msg => {
 })
 
 bot.on('text', msg => {
+  if (msg.text && msg.text.startsWith('/')) {
+    return
+  }
   if (msg.chat && msg.chat.id < 0) {
     console.log(msg.chat.id)
   }

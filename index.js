@@ -6,7 +6,7 @@ const bot = new TeleBot(token);
 const destGroupId = parseInt(process.env.KEPPANABOT_DEST_GROUP, 10);
 
 bot.on('/help', msg => {
-  return msg.reply.text('Laita mulle privaviesti niin välitän tänne');
+  return msg.reply.text('Laita mulle privaviesti niin välitän tänne. Vain teksti toimii, gif sticker yms on kickbannattu 🌚');
 });
 
 bot.on('text', msg => {

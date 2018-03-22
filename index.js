@@ -5,19 +5,9 @@ const bot = new TeleBot(token);
 
 const destGroupId = parseInt(process.env.KEPPANABOT_DEST_GROUP, 10);
 
-/*bot.on('/jii', msg => {
-  console.log(JSON.stringify(msg, null, 2))
-  let chatId = msg.from.id;
-  console.log(chatId);
-  let firstName = msg.from.first_name;
-  let reply = msg.message_id;
-  let text = msg.text;
-  if (text === 'Hello, World!') {
-    text = 'Ime Slaikkuu Joonas';
-  }
-  text = "Hello from KeppanaBot"
-  return bot.sendMessage(chatId, text);
-});*/
+bot.on('/help', msg => {
+  return msg.reply.text('Laita mulle privaviesti niin välitän tänne');
+});
 
 bot.on('text', msg => {
   if (msg.chat && msg.chat.id < 0) {

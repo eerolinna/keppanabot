@@ -23,14 +23,15 @@ bot.on('text', msg => {
   if (msg.chat) {
     console.log(msg.chat.id)
   }
-  return msg.reply.text('Jii!')
-  let text = msg.text;
-  if (text === 'Hello, World!') {
-    text = `Ime Slaikkuu ${msg.from.first_name}`;
-    return msg.reply.text(text)
-  }
   else {
-    return bot.sendMessage(destGroupId, text);
+    let text = msg.text;
+    if (text === 'Hello, World!') {
+      text = `Ime Slaikkuu ${msg.from.first_name}`;
+      return msg.reply.text(text)
+    }
+    else {
+      return bot.sendMessage(destGroupId, text);
+    }
   }
 });
 

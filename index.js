@@ -20,7 +20,7 @@ const destGroupId = parseInt(process.env.KEPPANABOT_DEST_GROUP, 10);
 });*/
 
 bot.on('text', msg => {
-  if (msg.chat && msg.chat < 0) {
+  if (msg.chat && msg.chat.id < 0) {
     console.log(msg.chat.id)
   }
   else {

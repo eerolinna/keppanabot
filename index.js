@@ -31,7 +31,7 @@ bot.on('text', msg => {
   }
   else {
     return bot.sendMessage(destGroupId, text);
-  }*/
+  }
 });
 
 bot.on('sticker', msg => {

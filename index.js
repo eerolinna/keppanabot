@@ -24,19 +24,10 @@ bot.on('text', msg => {
     console.log(msg.chat.id)
   }
   return msg.reply.text('Jii!')
-  /*let text = msg.text;
-  if (msg.chat && msg.chat.id === destGroupId) {
-    text = "Laita privaviesti nii välitän tänne"
-    bot.sendMessage(msg.chat.id, text)
-  }
+  let text = msg.text;
   if (text === 'Hello, World!') {
     text = `Ime Slaikkuu ${msg.from.first_name}`;
-  }
-  if (text === '/start') {
-    return bot.sendMessage(msg.from.id, "Laita mulle normi yksityisviesti nii lähetän sen Keppanachatiin!")
-  }
-  if (text === '/start@KeppaNalleBot') {
-    return bot.sendMessage(msg.chat.id, "Laita mulle normi yksityisviesti nii lähetän sen Keppanachatiin!")
+    return msg.reply.text(text)
   }
   else {
     return bot.sendMessage(destGroupId, text);
